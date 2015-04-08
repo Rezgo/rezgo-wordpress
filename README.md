@@ -1,2 +1,2 @@
 # rezgo-wordpress
-Rezgo parser for Wordpress.
+Rezgo parser for WordPress.
