@@ -48,7 +48,7 @@
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-error_reporting(0);
+//error_reporting(0);
 ob_start();
 
 define('REZGO_PLUGIN_DIR', plugin_dir_path(__FILE__));
