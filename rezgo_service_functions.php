@@ -1,7 +1,8 @@
 <?php
 
-function rezgo_inlude_file($filePath = '')
+function rezgo_inlude_file($filePath = '', $additionalVars = array())
 {
+    extract($additionalVars);
     include_once(__DIR__ . DIRECTORY_SEPARATOR . $filePath);
 }
 

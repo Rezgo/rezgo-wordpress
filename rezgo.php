@@ -48,12 +48,17 @@
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
+error_reporting(0);
 ob_start();
 
-define('REZGO_DIR', plugin_dir_path(__FILE__));
+define('REZGO_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 require_once('rezgo_service_functions.php');
+require_once('rezgo_plugin_logic.php');
+
 rezgo_inlude_file('/settings/settings.php');
+
+add_shortcode('rezgo_shortcode', 'rezgo_iframe');
+add_action('rezgo_tpl_display', 'rezgo_iframe');
 
 
