@@ -38,6 +38,9 @@ function rezgo_add_rewrite_rules($wp_rewrite) {
         '(.+?)/tag/([^\/]*)/?$'
         => 'index.php?pagename=$matches[1]&mode=index&tags=$matches[2]',
 
+        '(.+?)/order/?$'
+        => 'index.php?pagename=$matches[1]&mode=page_order',
+
     );
 
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

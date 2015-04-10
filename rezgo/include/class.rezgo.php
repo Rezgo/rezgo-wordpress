@@ -223,7 +223,7 @@
 			
 			// handle the add to cart request if one is set
 			if(is_array($_REQUEST['add']) || $_COOKIE['rezgo_cart_'.REZGO_CID] || $_SESSION['rezgo_cart_'.REZGO_CID] || $_REQUEST[order] == 'clear') {
-				
+
 				$ttl = (REZGO_CART_TTL > 0 || REZGO_CART_TTL === 0) ? REZGO_CART_TTL : 86400;
 				
 				$clear = 0;
@@ -242,7 +242,6 @@
 				}
 				
 				if(is_array($_REQUEST['add'])) {
-				
 					if(!$new_header) $new_header = urldecode($_SERVER['REQUEST_URI']); // urldecode is needed to catch the [ marks on the array
 					
 					// remove the cart information wherever it is
@@ -261,7 +260,6 @@
 					
 				// we need to set the session here before we header the user off or the old session will override the new cart each time
 				$_SESSION['rezgo_cart_'.REZGO_CID] = $cart;
-				
 				if(isset($new_header)) $this->sendTo((($this->checkSecure()) ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$new_header);
 			}
 			
@@ -685,7 +683,7 @@
 			if($i == 'cart') {		
 				if(!$this->cart_response) {
 					
-					$query = 'https://'.$this->advanced_xml_path.urlencode('<instruction>cart</instruction><cart>'.$this->getCartIDs().'</cart>'.$arguments.'</request>');
+					$query = 'http://'.$this->advanced_xml_path.urlencode('<instruction>cart</instruction><cart>'.$this->getCartIDs().'</cart>'.$arguments.'</request>');
 					
 					$xml = $this->fetchXML($query);
 					
@@ -1967,8 +1965,8 @@
 		
 		// fetch the full shopping cart including detailed tour info
 		function getCart($hide=null) {
-			
-			$types = array('adult', 'child', 'senior', 'price4', 'price5', 'price6', 'price7', 'price8', 'price9');
+
+            $types = array('adult', 'child', 'senior', 'price4', 'price5', 'price6', 'price7', 'price8', 'price9');
 			
 			if(is_array($this->cart)) {	
 				
@@ -1994,7 +1992,9 @@
 				
 				// attach the search as an index including the limit value and promo code
 				$request = $a.$promo.$limit;
-				
+
+
+
 				$this->XMLRequest(cart, $request);
 				
 				if($this->cart_response) {
@@ -2035,7 +2035,8 @@
 					}
 					
 					
-				}	
+				}
+
 			}
 			
 			return (array) $cart;

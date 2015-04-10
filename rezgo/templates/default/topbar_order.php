@@ -1,6 +1,8 @@
 <?
+    if(isset($_REQUEST['parent_url'])) {
+        $site->base = DIRECTORY_SEPARATOR . $_REQUEST['parent_url'];
+    }
 	$cart = $site->getCart();
-	
 	if(!$cart) {
 		
 		echo '

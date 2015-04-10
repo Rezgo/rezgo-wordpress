@@ -274,7 +274,7 @@
               $(document).ready(function () {
                 
                 $.ajax({
-                  url: '<?=$site->base?>/calendar_day.php?com=<?=$item->com?>&date=<?=date('Y-m-d', $option['start_date'])?>&option_num=<?=$opt?>',
+                  url: '<?=$site->base?>/calendar_day.php?parent_url=<?= $_REQUEST['parent_url'] ?>&com=<?=$item->com?>&date=<?=date('Y-m-d', $option['start_date'])?>&option_num=<?=$opt?>',
                   context: document.body,
                   success: function(data) {
 										if (data.indexOf('rezgo-option-hide') == -1) {
@@ -692,7 +692,7 @@
 							$('.rezgo-date-selector').css('opacity', '0.4');
 							
 							$.ajax({
-								url: '<?=$site->base?>/calendar_day.php?com=<?=$item->com?>&date=' + this_date,
+								url: '<?=$site->base?>/calendar_day.php?parent_url<?= $_REQUEST['parent_url'] ?>&com=<?=$item->com?>&date=' + this_date,
 								context: document.body,
 								success: function(data) {
 									$('.rezgo-date-selector').html(data).css('opacity', '1');
@@ -770,7 +770,7 @@
 			}
 			
 			$.ajax({
-				url: '<?=$site->base?>/calendar_day.php?com=<?=$item->com?>&date=<?=$open_cal_day?>',
+				url: '<?=$site->base?>/calendar_day.php?parent_url=<?= $_REQUEST['parent_url'] ?>&com=<?=$item->com?>&date=<?=$open_cal_day?>',
 				context: document.body,
 				success: function(data) {
 					$('.rezgo-date-selector').html(data).css('opacity', '1');
