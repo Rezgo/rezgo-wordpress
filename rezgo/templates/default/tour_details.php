@@ -164,7 +164,7 @@
 					if($site->getCartState()) {
 	          $cart = $site->getCart();
 	          if($cart) {
-							echo '<a class="rezgo-cart-link badge pull-left" href="'.$site->base.'/order"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="hidden-xs">'.count($cart).' item'.((count($cart) > 1) ? 's' : '').' in </span>order<span class="visible-xs-inline"> ('.count($cart).')</span></a>';
+							echo '<a class="rezgo-cart-link badge pull-left" href="/'.$_REQUEST['parent_url'].'/order"><i class="fa fa-shopping-cart"></i>&nbsp;<span class="hidden-xs">'.count($cart).' item'.((count($cart) > 1) ? 's' : '').' in </span>order<span class="visible-xs-inline"> ('.count($cart).')</span></a>';
 	        	}
 					}
 					?>      

@@ -60,7 +60,7 @@ $company = $site->getCompanyDetails();
             </div>
             <div class="col-lg-3 col-sm-4 col-xs-12">
               <div class="col-sm-12 rezgo-btn-cart-wrp">
-              <button type="button" data-toggle="collapse" class="btn rezgo-btn-default btn-block rezgo-pax-edit-btn" data-order-item="<?=$item->uid?>" data-order-com="<?=$item->com?>" data-cart-id="<?=$item->cartID?>" data-book-date="<?=date("Y-m-d", (string)$item->booking_date)?>" href="#pax-edit-<?=$item->cartID?>">Edit Guests</button>        
+              <button type="button" data-toggle="collapse" class="btn rezgo-btn-default btn-block rezgo-pax-edit-btn" data-order-item="<?=$item->uid?>" data-order-com="<?=$item->com?>" data-cart-id="<?=$item->cartID?>" data-book-date="<?=date("Y-m-d", (string)$item->booking_date)?>" data-target="#pax-edit-<?=$item->cartID?>">Edit Guests</button>
               </div>
               <? if($site->getCartState()) { ?>
               <div class="col-sm-12 rezgo-btn-cart-wrp">
@@ -264,7 +264,7 @@ $company = $site->getCompanyDetails();
         var book_date = $(this).attr('data-book-date'); 
         
         $.ajax({
-          url: '<?=$site->base?>/edit_pax.php?com=' + order_com + '&id=' + order_item + '&order_id=' + cart_id + '&date=' + book_date,
+          url: '<?=$site->base_url?>/edit_pax.php?com=' + order_com + '&id=' + order_item + '&order_id=' + cart_id + '&date=' + book_date + '&parent_url=<?= $site->base ?>',
           context: document.body,
           success: function(data) {				
             

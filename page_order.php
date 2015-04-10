@@ -5,7 +5,11 @@
 	
 	// start a new instance of RezgoSite
 	$site = new RezgoSite();
-	
+
+    if(isset($_REQUEST['parent_url'])) {
+        $site->base = DIRECTORY_SEPARATOR . $_REQUEST['parent_url'];
+    }
+
 ?>
 
 <?=$site->getTemplate('frame_header')?>
