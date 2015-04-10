@@ -378,7 +378,7 @@
 					<div class="panel panel-default rezgo-panel" id="rezgo-panel-itinerary">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#itinerary">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#itinerary" >
 									<div class="rezgo-section-icon"><i class="fa fa-bars fa-lg"></i></div>
 									<div class="rezgo-section-text">Itinerary</div>
 									<div class="clearfix"></div>
@@ -395,7 +395,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-pickup">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#pickup">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#pickup" >
 									<div class="rezgo-section-icon"><i class="fa fa-map-marker fa-lg"></i></div>
 									<div class="rezgo-section-text">Pickup</div>
 									<div class="clearfix"></div>
@@ -412,7 +412,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-dropoff">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#dropoff">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#dropoff" >
 									<div class="rezgo-section-icon"><i class="fa fa-location-arrow fa-lg"></i></div>
 									<div class="rezgo-section-text">Drop Off</div>
 									<div class="clearfix"></div>
@@ -429,7 +429,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-thingstobring">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#thingstobring">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#thingstobring" >
 									<div class="rezgo-section-icon"><i class="fa fa-suitcase fa-lg"></i></div>
 									<div class="rezgo-section-text">Things To Bring</div>
 									<div class="clearfix"></div>
@@ -446,7 +446,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-inclusion">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#inclusion">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#inclusion" >
 									<div class="rezgo-section-icon"><i class="fa fa-plus-square fa-lg"></i></div>
 									<div class="rezgo-section-text">Inclusions</div>
 									<div class="clearfix"></div>
@@ -463,7 +463,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-exclusion">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#exclusion">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#exclusion" >
 									<div class="rezgo-section-icon"><i class="fa fa-minus-square fa-lg"></i></div>
 									<div class="rezgo-section-text">Exclusions</div>
 									<div class="clearfix"></div>
@@ -480,7 +480,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-addinfo">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#addinfo">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#addinfo" >
 									<div class="rezgo-section-icon"><i class="fa fa-info-circle fa-lg"></i></div>
 									<div class="rezgo-section-text"><?=$item->details->description_name?></div>
 									<div class="clearfix"></div>
@@ -497,7 +497,7 @@
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-cancellation">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" class="rezgo-section" href="#cancellation">
+								<a data-toggle="collapse" class="rezgo-section" data-target="#cancellation" >
 									<div class="rezgo-section-icon"><i class="fa fa-exclamation-circle fa-lg"></i></div>
 									<div class="rezgo-section-text">Cancellation Policy</div>
 									<div class="clearfix"></div>
@@ -804,7 +804,7 @@
 			});
       
     });
-		
+
   </script>
 
 <? } ?>

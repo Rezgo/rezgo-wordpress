@@ -431,9 +431,13 @@ p.rezgo-list-price {
 	float:left;
 }
 .rezgo-section-text {
-	font-size:16px;
-	font-weight:normal;
-	float:left;
+    font-size: 16px;
+    font-weight: normal;
+    float: left;
+}
+
+.rezgo-section-text:hover {
+    cursor: pointer;
 }
 .rezgo-list-image {
 	overflow:hidden;
