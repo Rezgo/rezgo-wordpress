@@ -58,6 +58,9 @@ require_once('rezgo_plugin_logic.php');
 
 rezgo_inlude_file('/settings/settings.php');
 
+register_activation_hook(__FILE__, 'flush_rewrite_rules');
+add_action('generate_rewrite_rules', 'rezgo_add_rewrite_rules');
+
 add_shortcode('rezgo_shortcode', 'rezgo_iframe');
 add_action('rezgo_tpl_display', 'rezgo_iframe');
 

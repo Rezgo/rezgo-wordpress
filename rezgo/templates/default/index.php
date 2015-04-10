@@ -34,6 +34,8 @@
   var search_for = '<?=$site->requestStr('search_for')?>';
   var cid = '<?=$site->requestNum('cid')?>';
 
+  var parent_url = parent.window.location.href;
+
   $(document).ready(function() {
           
     $content = $('#rezgo-list-content');
@@ -42,7 +44,7 @@
     $footer.html('<div class="rezgo-wait-div"></div>');
     
     $.ajax({
-      url: '<?= REZGO_URL_BASE ?>/index_ajax.php?pg=' + start + '&start_date=' + search_start_date + '&end_date=' + search_end_date + '&tags=' + search_tags + '&search_in=' + search_in + '&search_for=' + search_for + '&cid=' + cid,
+      url: '<?= REZGO_URL_BASE ?>/index_ajax.php?parent_url=' + parent_url + '&pg=' + start + '&start_date=' + search_start_date + '&end_date=' + search_end_date + '&tags=' + search_tags + '&search_in=' + search_in + '&search_for=' + search_for + '&cid=' + cid,
       context: document.body,
       success: function(data) {				
         
@@ -79,6 +81,9 @@
       
       $footer.html('<div class="rezgo-wait-div"></div>');
       $('#rezgo-list-content-more').fadeOut();
+
+
+
       //(Number(page_num) + 1)
       $.ajax({
         url: '<?= REZGO_URL_BASE ?>/index_ajax.php?pg=' + start + '&start_date=' + search_start_date + '&end_date=' + search_end_date + '&tags=' + search_tags + '&search_in=' + search_in + '&search_for=' + search_for + '&cid=' + cid,

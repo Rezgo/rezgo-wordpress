@@ -6,6 +6,7 @@
 	
 	// start a new instance of RezgoSite
 	$site = new RezgoSite();
+    $site->base = $_REQUEST['parent_url'];
 	
 	// save the current search to a cookie so we can return to it
 	if($_REQUEST['search'] != 'restore') {

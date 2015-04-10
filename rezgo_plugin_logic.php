@@ -29,11 +29,11 @@ function rezgo_add_rewrite_rules($wp_rewrite) {
 
         // tour details page (general)
         '(.+?)/details/([0-9]+)/([^\/]+)/?$'
-        => 'index.php?pagename=$matches[1]&rezgo_page=tour_details&com=$matches[2]&mode=page_details',
+        => 'index.php?pagename=$matches[1]&com=$matches[2]&mode=page_details',
 
         // tour details page (date and option selected)
         '(.+?)/details/([0-9]+)/([^\/]+)/([0-9]+)/([^\/]+)/?$'
-        => 'index.php?pagename=$matches[1]&rezgo_page=tour_details&com=$matches[2]&option=$matches[4]&date=$matches[5]&mode=page_details',
+        => 'index.php?pagename=$matches[1]&com=$matches[2]&option=$matches[4]&date=$matches[5]&mode=page_details',
     );
 
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

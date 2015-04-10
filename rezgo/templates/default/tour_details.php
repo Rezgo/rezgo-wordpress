@@ -13,7 +13,6 @@
 
 <?
 	$items = $site->getTours('t=com&q='.$_REQUEST['com'].'&f[uid]='.$_REQUEST['option'].'&d='.$_REQUEST['date']);
-	
 	if(!$items) { ?>
   
   <div class="jumbotron"> 
@@ -50,7 +49,6 @@
 	$item_count = 1;
 	
 	foreach( $items as $item ) { 
-		
 		$site->readItem($item);
 		
 		// check if single dates or calendar
@@ -149,7 +147,6 @@
 	}
 		
 	$calendar_events = trim($calendar_events, ','."\n");
-  
   ?>
   
   
@@ -374,10 +371,10 @@
 					$mclass = ' in';
 				}	
 			?>
-	  
+	    <!-- div for content -->
 	    <div class="panel-group rezgo-desc-panel" id="rezgo-tour-panels">
-	  	
-				<? if($site->exists($item->details->itinerary)) { ?> 
+
+				<? if($site->exists($item->details->itinerary)) { ?>
 					<div class="panel panel-default rezgo-panel" id="rezgo-panel-itinerary">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -393,8 +390,8 @@
 						</div>
 					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->pick_up)) { ?> 
+
+				<? if($site->exists($item->details->pick_up)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-pickup">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -408,10 +405,10 @@
 						<div id="pickup" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->pick_up?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->drop_off)) { ?> 
+
+				<? if($site->exists($item->details->drop_off)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-dropoff">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -425,10 +422,10 @@
 						<div id="dropoff" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->drop_off?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->bring)) { ?> 
+
+				<? if($site->exists($item->details->bring)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-thingstobring">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -442,10 +439,10 @@
 						<div id="thingstobring" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->bring?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->inclusions)) { ?> 
+
+				<? if($site->exists($item->details->inclusions)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-inclusion">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -459,10 +456,10 @@
 						<div id="inclusion" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->inclusions?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->exclusions)) { ?> 
+
+				<? if($site->exists($item->details->exclusions)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-exclusion">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -476,10 +473,10 @@
 						<div id="exclusion" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->exclusions?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				
-				<? if($site->exists($item->details->description)) { ?> 
+
+				<? if($site->exists($item->details->description)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-addinfo">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -493,10 +490,10 @@
 						<div id="addinfo" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->description?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-				  
-				<? if($site->exists($item->details->cancellation)) { ?> 
+
+				<? if($site->exists($item->details->cancellation)) { ?>
 		    	<div class="panel panel-default rezgo-panel" id="rezgo-panel-cancellation">
 						<div class="panel-heading rezgo-section">
 							<h4 class="panel-title">
@@ -510,13 +507,13 @@
 						<div id="cancellation" class="panel-collapse collapse<?=$mclass?>">
 						<div class="panel-body rezgo-panel-body"><?=$item->details->cancellation?></div>
 						</div>
-					</div> 
+					</div>
 				<? } ?>
-			
+
 	    </div><!-- //  #rezgo-tour-panels -->
 	  
     </div><!-- // .rezgo-left-wrp -->
-        
+        <!-- div for map -->
 		<div class="col-md-4 col-sm-5 col-xs-12 rezgo-right-wrp pull-right">
 		
 			<? if($site->exists($item->lat)) { ?>
@@ -581,7 +578,7 @@
         </script>    
       
       	<div style="position:relative;">	
-          <div class="rezgo-map" id="rezgo-tour-map"><!-- tour map here --></div>	
+          <div class="rezgo-map" id="rezgo-tour-map"><!-- tour map here --></div>
             
           <div class="rezgo-map-labels">
             <? if($item->location_name != '') { ?>

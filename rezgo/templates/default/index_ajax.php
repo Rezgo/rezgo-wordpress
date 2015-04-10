@@ -57,7 +57,7 @@
 		$available_items++;
 	}
 	
-	$tour_details_link = $site->base.'/details/'.$item->com.'/'.$site->seoEncode($item->item);
+	$tour_details_link = $site->base.'details/'.$item->com.'/'.$site->seoEncode($item->item);
 	?>
   
     <div itemscope itemtype="http://schema.org/Product" class="rezgo-list-item<?=(($item_unavailable) ? ' rezgo-inventory-unavailable' : '')?>">
