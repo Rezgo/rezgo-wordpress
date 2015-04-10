@@ -127,6 +127,7 @@
 			
 			// assemble template and url path
 			$this->path = REZGO_DIR.'/templates/'.REZGO_TEMPLATE;
+            $this->base_url = REZGO_URL_BASE;
 			$this->base = REZGO_URL_BASE;
 			
 			if(!defined(REZGO_PATH)) define("REZGO_PATH", $this->path);
