@@ -3,10 +3,10 @@
 	// so that the rezgo parser classes and functions will be available to your templates
 	error_reporting(0);
 	require('rezgo/include/page_header.php');
-	
+
 	// start a new instance of RezgoSite
 	$site = new RezgoSite();
-    $site->base = $_REQUEST['parent_url'];
+    $site->base = DIRECTORY_SEPARATOR . $_REQUEST['parent_url'] . DIRECTORY_SEPARATOR;
 	
 	// save the current search to a cookie so we can return to it
 	if($_REQUEST['search'] != 'restore') {

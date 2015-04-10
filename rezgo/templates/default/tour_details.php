@@ -347,7 +347,7 @@
 				    <? 
 							foreach($site->getTourTags() as $tag) { 
 								if ($tag != '') {
-									$taglist .= '<a href="'.$site->base.'/tag/'.urlencode($tag).'">'.$tag.'</a>, ';
+									$taglist .= '<a href="/'.$_REQUEST['parent_url'].'/tag/'.urlencode($tag).'">'.$tag.'</a>, ';
 								}
 							}
 							$taglist = trim($taglist, ', ');

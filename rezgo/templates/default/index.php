@@ -44,7 +44,7 @@
     $footer.html('<div class="rezgo-wait-div"></div>');
     
     $.ajax({
-      url: '<?= REZGO_URL_BASE ?>/index_ajax.php?parent_url=' + parent_url + '&pg=' + start + '&start_date=' + search_start_date + '&end_date=' + search_end_date + '&tags=' + search_tags + '&search_in=' + search_in + '&search_for=' + search_for + '&cid=' + cid,
+      url: '<?= REZGO_URL_BASE ?>/index_ajax.php?parent_url=<?= $_REQUEST['parent_url'] ?>&pg=' + start + '&start_date=' + search_start_date + '&end_date=' + search_end_date + '&tags=' + search_tags + '&search_in=' + search_in + '&search_for=' + search_for + '&cid=' + cid,
       context: document.body,
       success: function(data) {				
         

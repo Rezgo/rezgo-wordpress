@@ -34,6 +34,10 @@ function rezgo_add_rewrite_rules($wp_rewrite) {
         // tour details page (date and option selected)
         '(.+?)/details/([0-9]+)/([^\/]+)/([0-9]+)/([^\/]+)/?$'
         => 'index.php?pagename=$matches[1]&com=$matches[2]&option=$matches[4]&date=$matches[5]&mode=page_details',
+
+        '(.+?)/tag/([^\/]*)/?$'
+        => 'index.php?pagename=$matches[1]&mode=index&tags=$matches[2]',
+
     );
 
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
