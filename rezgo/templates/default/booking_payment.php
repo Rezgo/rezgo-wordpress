@@ -29,7 +29,7 @@
 <? } ?>
 
 <!-- jQuery & Bootstrap JS -->
-<script src="/js/iframeResizer.contentWindow.min.js"></script>
+<script src="<?=REZGO_URL_BASE?>/js/iframeResizer.contentWindow.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="<?=$site->path?>/js/bootstrap.min.js"></script>
 

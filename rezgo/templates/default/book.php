@@ -888,7 +888,7 @@ if (!Array.prototype.forEach){
               <? if($pay[name] == 'Credit Cards') { ?>
                 
                 <div id="payment_cards">
-                  <iframe scrolling="no" frameborder="0" name="tour_payment" id="tour_payment" src="<?=$site->base?>/booking_payment.php"></iframe>
+                  <iframe scrolling="no" frameborder="0" name="tour_payment" id="tour_payment" src="<?=$site->base_url?>/booking_payment.php"></iframe>
 									<script type="text/javascript">
                     iFrameResize ({
                       enablePublicMethods: true,
@@ -1199,7 +1199,7 @@ if (!Array.prototype.forEach){
 							
 							// the field is present? submit normally								
 							$('#book').ajaxSubmit({ 
-								url: '<?=$site->base?>/book_ajax.php', 
+								url: '<?=$site->base_url?>/book_ajax.php',
 								data: { rezgoAction: 'book' }, 
 								success: delay_response, 
 								error: function() {
@@ -1218,7 +1218,7 @@ if (!Array.prototype.forEach){
 										
 					// not a credit card payment (or $0) and everything checked out, submit via ajaxSubmit (jquery.form.js)					
 					$('#book').ajaxSubmit({ 
-						url: '<?=$site->base?>/book_ajax.php', 
+						url: '<?=$site->base_url?>/book_ajax.php',
 						data: { rezgoAction: 'book' }, 
 						success: delay_response, 
 						error: function() {
@@ -1371,7 +1371,7 @@ if (!Array.prototype.forEach){
 		}
 		
 		$('#book').ajaxSubmit({
-			url: '<?=$site->base?>/book_ajax.php',
+			url: '<?=$site->base_url?>/book_ajax.php',
 			data: { rezgoAction: 'get_paypal_token' }, 
 			success: function(token) {
 				

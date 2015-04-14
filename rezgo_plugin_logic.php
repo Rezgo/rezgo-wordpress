@@ -41,6 +41,10 @@ function rezgo_add_rewrite_rules($wp_rewrite) {
         '(.+?)/order/?$'
         => 'index.php?pagename=$matches[1]&mode=page_order',
 
+        '(.+?)/book/?$'
+        => 'index.php?pagename=$matches[1]&mode=page_book&sec=1&title=Book+Now',
+
+
     );
 
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
