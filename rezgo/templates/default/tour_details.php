@@ -692,7 +692,7 @@
 							$('.rezgo-date-selector').css('opacity', '0.4');
 							
 							$.ajax({
-								url: '<?=$site->base?>/calendar_day.php?parent_url<?= $_REQUEST['parent_url'] ?>&com=<?=$item->com?>&date=' + this_date,
+								url: '<?=$site->base?>/calendar_day.php?parent_url=<?= $_REQUEST['parent_url'] ?>&com=<?=$item->com?>&date=' + this_date,
 								context: document.body,
 								success: function(data) {
 									$('.rezgo-date-selector').html(data).css('opacity', '1');
