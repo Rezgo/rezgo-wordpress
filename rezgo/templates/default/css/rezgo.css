@@ -5,11 +5,18 @@
 
 @charset "UTF-8";
 
+
+.rezgo-content-left {
+    min-height: 620px;
+}
+
 /* Smart phones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-	
+    .rezgo-content-left {
+        min-height: 100px;
+    }
   .rezgo-container {
     padding-right: 10px !important;
     padding-left: 5px !important;
@@ -149,6 +156,9 @@ and (orientation : portrait) {
 	.rezgo-confirmation-detail .dl-horizontal dd, .rezgo-confirmation-additional-info .dl-horizontal dd {
 		margin-left:275px !important;
 	}
+    .rezgo-content-left {
+        min-height: 100px;
+    }
 }
 
 @media(min-width:1200px){
@@ -158,6 +168,9 @@ and (orientation : portrait) {
 	.rezgo-confirmation-detail .dl-horizontal dd, .rezgo-confirmation-additional-info .dl-horizontal dd {
 		margin-left:275px;
 	}
+    .rezgo-content-left {
+        min-height: 100px;
+    }
 }
 
 /* overwriting bootstrap defaults */

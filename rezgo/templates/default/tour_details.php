@@ -300,7 +300,7 @@
 		  
   	</div>
   	
-		<div class="col-md-8 col-sm-7 col-xs-12 rezgo-left-wrp pull-left">
+		<div class="col-md-8 col-sm-7 col-xs-12 rezgo-left-wrp pull-left rezgo-content-left">
 		  
       <? if($site->exists($item->details->highlights)) { ?> 
         <div class="rezgo-tour-highlights"><?=$item->details->highlights?></div>
