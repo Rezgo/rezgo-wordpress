@@ -152,7 +152,7 @@ $company = $site->getCompanyDetails();
 			<? if(!$site->isVendor()) { ?>
         <div class="row rezgo-form-group-short">
         <? if (!$_SESSION['rezgo_promo']) { ?>
-          <form class="form-inline" id="rezgo-promo-form" role="form" onsubmit="top.location.href = '/order?promo=' + $('#rezgo-promo-code').val(); return false;">
+          <form class="form-inline" id="rezgo-promo-form" role="form" onsubmit="top.location.href = '/<?= $_REQUEST['parent_url'] ?>/order?promo=' + $('#rezgo-promo-code').val(); return false;">
             <label for="rezgo-promo-code"><i class="fa fa-tags"></i>&nbsp;Promo code</label>&nbsp;
             <div class="input-group">
             <input type="text" class="form-control" id="rezgo-promo-code" name="promo" placeholder="Enter Promo Code" value="<?=($_SESSION['rezgo_promo'] ? $_SESSION['rezgo_promo'] : '')?>" />
@@ -162,7 +162,7 @@ $company = $site->getCompanyDetails();
         <? } else { ?>
           <label for="rezgo-promo-code"><i class="fa fa-tags"></i>&nbsp;Entered promo code:</label>&nbsp;
         	<span id="rezgo-promo-value"><?=$_SESSION['rezgo_promo']?></span>&nbsp;
-          <a id="rezgo-promo-clear" class="btn rezgo-btn-default btn-sm" href="/order?promo=" target="_top">clear</a>
+          <a id="rezgo-promo-clear" class="btn rezgo-btn-default btn-sm" href="/<?= $_REQUEST['parent_url'] ?>/order?promo=" target="_top">clear</a>
         <? } ?>
         </div>
       <? } ?>
@@ -217,7 +217,7 @@ $company = $site->getCompanyDetails();
 		
 		$pax_nums = array ('adult_num', 'child_num', 'senior_num', 'price4_num', 'price5_num', 'price6_num', 'price7_num', 'price8_num', 'price9_num');
 		
-    $order_share_link = 'http://'.$_SERVER[HTTP_HOST].$site->base.'/order/?order=clear';	
+    $order_share_link = 'http://'.$_SERVER['HTTP_HOST'].$site->base.'/order/?order=clear';
 				
     foreach( $cart as $key => $item ) {
 			
