@@ -13,9 +13,10 @@
  */
 
 //Configuration Files
-include_once('includes/config.inc.php'); 
+error_reporting(0);
+include_once('includes/config.inc.php');
 include_once('includes/global_config.inc.php');
-?> 
+?>
 
 <html>
 <head><title>Pay with a PayPal account</title></head>
