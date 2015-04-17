@@ -26,7 +26,6 @@ function rezgo_iframe($args)
 function rezgo_add_rewrite_rules($wp_rewrite) {
 
     $new_rules = array (
-
         // tour details page (general)
         '(.+?)/details/([0-9]+)/([^\/]+)/?$'
         => 'index.php?pagename=$matches[1]&com=$matches[2]&mode=page_details',
@@ -44,7 +43,14 @@ function rezgo_add_rewrite_rules($wp_rewrite) {
         '(.+?)/book/?$'
         => 'index.php?pagename=$matches[1]&mode=page_book&sec=1&title=Book+Now',
 
+        '(.+?)/complete/([^\/]*)/print/?$'
+        => 'index.php?pagename=$matches[1]&mode=booking_complete_print&trans_num=$matches[2]',
 
+        '(.+?)/complete/([^\/]*)/pdf/?$'
+        => 'index.php?pagename=$matches[1]&mode=booking_complete_pdf&trans_num=$matches[2]',
+
+        '(.+?)/complete/([^\/]*)/?$'
+        => 'index.php?pagename=$matches[1]&mode=booking_complete&trans_num=$matches[2]',
     );
 
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;

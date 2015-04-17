@@ -12,7 +12,7 @@
 	$site->setPageTitle((($_REQUEST['title']) ? $_REQUEST['title'] : ucwords(str_replace("page_", "", $_REQUEST['mode']))));
 
 	if($_REQUEST['mode'] == 'page_details') {
-		
+
 		/*
 			this query searches for an item based on a com id (limit 1 since we only want one response)
 			then adds a $f (filter) option by uid in case there is an option id, and adds a date in case there is a date set	
@@ -45,6 +45,12 @@
 		$site->setPageTitle((($_REQUEST['tags']) ? ucwords($_REQUEST['tags']) : 'Home'));
 		
 	}
+
+    $transNum = '';
+    if(!empty($_REQUEST['trans_num']))
+    {
+        $transNum = '&trans_num='.$_REQUEST['trans_num'];
+    }
 	
 ?>
 
@@ -71,7 +77,7 @@ if (!Array.prototype.forEach){
 </script>
 
 <div id="rezgo_content_container" style="width:100%;">
-	<iframe id="rezgo_content_frame" name="gform_" src="<?= REZGO_URL_BASE ?>/frame_router.php?mode=<?=$_REQUEST['mode']?>&com=<?=$_REQUEST['com']?>&parent_url=<?= $wp_current_page ?>&tags=<?= $_REQUEST['tags'] ?>" style="width:100%; height:900px; padding:0px; margin:0px;" frameBorder="0" scrolling="no"></iframe>
+	<iframe id="rezgo_content_frame" name="gform_" src="<?= REZGO_URL_BASE ?>/frame_router.php?mode=<?=$_REQUEST['mode']?>&com=<?=$_REQUEST['com']?>&parent_url=<?= $wp_current_page ?>&tags=<?= $_REQUEST['tags'] ?><?= $transNum ?>" style="width:100%; height:900px; padding:0px; margin:0px;" frameBorder="0" scrolling="no"></iframe>
 </div>
 
 <script type="text/javascript" src="<?= REZGO_URL_BASE ?>/js/iframeResizer.min.js"></script>
