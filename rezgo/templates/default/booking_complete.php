@@ -378,7 +378,7 @@
         <br />
         <? } ?>
         <? } ?>
-        <a href="javascript:void(0);" onclick="javascript:window.open('/terms',null,'width=800,height=600,status=no,toolbar=no,menubar=no,location=no,scrollbars=1');">Click here to view terms and conditions.</a> 
+        <a href="javascript:void(0);" onclick="javascript:window.open('<?= REZGO_URL_BASE ?>/page_terms.php',null,'width=800,height=600,status=no,toolbar=no,menubar=no,location=no,scrollbars=1');">Click here to view terms and conditions.</a>
         </p>
         
 				<? if($site->exists($booking->rid)) { ?>
