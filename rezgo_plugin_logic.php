@@ -18,6 +18,14 @@ function rezgo_iframe($args)
         $_REQUEST['mode'] = 'index';
     }
 
+    if($args) {
+        foreach($args as $k => $v) {
+            if(!$_REQUEST[$k]) {
+                $_REQUEST[$k] = $v;
+            }
+        }
+    }
+g
     rezgo_inlude_file('frame.php', array(
         'wp_current_page' => $wp_current_page,
     ));
