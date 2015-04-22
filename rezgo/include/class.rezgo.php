@@ -684,7 +684,7 @@
 			if($i == 'cart') {		
 				if(!$this->cart_response) {
 					
-					$query = 'http://'.$this->advanced_xml_path.urlencode('<instruction>cart</instruction><cart>'.$this->getCartIDs().'</cart>'.$arguments.'</request>');
+					$query = 'httpsg://'.$this->advanced_xml_path.urlencode('<instruction>cart</instruction><cart>'.$this->getCartIDs().'</cart>'.$arguments.'</request>');
 					
 					$xml = $this->fetchXML($query);
 					
