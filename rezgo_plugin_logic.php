@@ -25,7 +25,7 @@ function rezgo_iframe($args)
             }
         }
     }
-g
+
     rezgo_inlude_file('frame.php', array(
         'wp_current_page' => $wp_current_page,
     ));
