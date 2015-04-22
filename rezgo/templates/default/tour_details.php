@@ -802,6 +802,17 @@
 							}
 					});
 			});
+
+        // for the window resize
+        $(window).resize(function() {
+            var bodyWidth = $(document).width();
+            var rightColumnHeight = $('.rezgo-right-wrp').height();
+            if(bodyWidth > 760){
+                $(".rezgo-content-left").css({'min-height' : rightColumnHeight + 'px'});
+            } else {
+                $(".rezgo-content-left").css({'min-height' : 0});
+            }
+        });
       
     });
 
