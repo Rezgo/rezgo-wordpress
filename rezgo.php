@@ -56,7 +56,7 @@ define('REZGO_PLUGIN_DIR', plugin_dir_path(__FILE__));
 require_once('rezgo_service_functions.php');
 require_once('rezgo_plugin_logic.php');
 
-rezgo_inlude_file('/settings/settings.php');
+rezgo_inlude_file('/settings/rezgo_settings.php');
 
 register_activation_hook(__FILE__, 'flush_rewrite_rules');
 add_action('generate_rewrite_rules', 'rezgo_add_rewrite_rules');
