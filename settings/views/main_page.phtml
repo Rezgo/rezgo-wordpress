@@ -85,7 +85,7 @@
                     if(!empty($companyName)) { ?>
                         <span class="ajax_success">XML API Connected</span><br>
                         <span class="ajax_success_message"><?= $companyName ?></span>
-                        <a href="http://<?= $companyDomain ?>.rezgo.com" class="ajax_success_url" target="_blank"><?= $companyDomain ?></a>
+                        <a href="http://<?= $companyDomain ?>.rezgo.com" class="ajax_success_url" target="_blank"><?= $companyDomain ?>.rezgo.com</a>
                     <?php } else { ?>
                         <span class="ajax_error">XML API Error</span><br>
                         <span class="ajax_error_message"><?= $companyError ?></span>
@@ -189,7 +189,7 @@
             <dd>
                 <select name="rezgo_template" id="template_select">
                     <?php
-                    $handle = opendir('../wp-content/plugins/rezgo-online-booking/templates');
+                    $handle = opendir('../wp-content/plugins/rezgo-online-booking/rezgo/templates');
                     while (false !== ($file = readdir($handle))) {
                         if ($file != "." && $file != "..") {
                             $select = ($file == get_option('rezgo_template')) ? 'selected' : '';
