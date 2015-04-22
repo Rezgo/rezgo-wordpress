@@ -776,7 +776,7 @@
 		// ------------------------------------------------------------------------------
 		function setTourLimit($limit, $start=null) {
 			$str = ($start) ? $start.','.$limit : $limit;
-			$this->readItemlimit = $str;
+			$this->tour_limit = $str;
 		}
 		
 		function setRefId($id) {
