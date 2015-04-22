@@ -3,8 +3,9 @@
 
 	require('rezgo/include/page_header.php');
 
+    $_SERVER['REQUEST_URI'] = DIRECTORY_SEPARATOR . $_REQUEST['parent_url'] . DIRECTORY_SEPARATOR . 'book';
 	// start a new instance of RezgoSite
-	$site = new RezgoSite();
+	$site = new RezgoSite(true);
 
     if(isset($_REQUEST['parent_url'])) {
         $site->base = DIRECTORY_SEPARATOR . $_REQUEST['parent_url'] . DIRECTORY_SEPARATOR;
