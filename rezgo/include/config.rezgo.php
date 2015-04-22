@@ -17,11 +17,11 @@ define("REZGO_CAPTCHA_PRIV_KEY", get_option('rezgo_captcha_priv_key'));
 
 // Path to the rezgo install on your server, the default is /rezgo in the root.
 // this is used by the template includes as well as fetching files in the templates
-define("REZGO_DIR", strstr(preg_replace('/(https?\:\/\/)/', '', WP_PLUGIN_URL), '/').'/rezgo-wordpress/rezgo');
+define("REZGO_DIR", strstr(preg_replace('/(https?\:\/\/)/', '', WP_PLUGIN_URL), '/').'/rezgo-online-booking/rezgo');
 
 // The web root you want to precede links, the default is "" (empty) for root
 // to change to your own custom directory, add it like /my_directory or /my/directory
-define("REZGO_URL_BASE", strstr(preg_replace('/(https?\:\/\/)/', '', WP_PLUGIN_URL), '/').'/rezgo-wordpress');
+define("REZGO_URL_BASE", strstr(preg_replace('/(https?\:\/\/)/', '', WP_PLUGIN_URL), '/').'/rezgo-online-booking');
 
 // The top level frame you want to use as a destination for your links
 // works with top, blank, self, parent

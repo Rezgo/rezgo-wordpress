@@ -55,6 +55,8 @@ define('REZGO_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 require_once('rezgo_service_functions.php');
 require_once('rezgo_plugin_logic.php');
+require_once('rezgo/include/config.rezgo.php');
+
 
 rezgo_inlude_file('/settings/rezgo_settings.php');
 
